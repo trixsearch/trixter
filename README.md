@@ -8,7 +8,7 @@ TrixTer is a simple Twitter-style web application built with Django, allowing us
 - **Edit & Delete**: Users can edit or delete their posts.
 - **Admin Panel**: Manage posts through Django’s admin interface.
 
-## Project Structure
+
 
 ### Main Files
 - **`manage.py`**: Standard Django file for running management commands.
@@ -116,3 +116,15 @@ Django==5.1
 ## License
 
 This project is licensed under trixsearch private applications , will release the whole license soon
+
+Here's the updated README incorporating Bootstrap usage:
+
+
+## Running the App
+
+- To create a post, navigate to `http://127.0.0.1:8000/trix/create`.
+- To view all posts, visit `http://127.0.0.1:8000/trix`.
+- Admin interface: `http://127.0.0.1:8000/admin`.
+
+---
+
