@@ -9,6 +9,30 @@ TrixTer is a simple Twitter-style web application built with Django, allowing us
 - **Admin Panel**: Manage posts through Django’s admin interface.
 
 
+## Project Structure
+
+```bash
+TrixTer/
+│
+├── trixter/                 # Project folder
+│   ├── settings.py          # Project settings
+│   ├── urls.py              # URL configuration
+│   └── ...
+│
+├── trix/                    # Main app folder
+│   ├── models.py            # Data models for Trix
+│   ├── forms.py             # Forms for creating/editing Trix
+│   ├── views.py             # Logic for rendering templates and handling requests
+│   ├── urls.py              # URL routing for the app
+│   ├── templates/           # HTML templates (Bootstrap included)
+│   │   ├── layout.html      # Base layout using Bootstrap
+│   │   ├── trix_list.html   # Display all Trix
+│   │   └── trix_form.html   # Form for creating and editing Trix
+│   └── static/              # Static files (CSS, JS, images)
+│
+├── media/                   # Uploaded images
+└── requirements.txt         # Dependencies
+```
 
 ### Main Files
 - **`manage.py`**: Standard Django file for running management commands.
