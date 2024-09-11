@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}All Trix's{% endblock title %}
+
+{% block content %}
+<h1 class="text-white text-center mt-4">Welcome to TrixTer Project</h1>
+
+<a class="btn btn-primary mb-5" href="{% url "trix_create" %}">Create a Trix</a>
+
+<div class="container row gap-3">
+    {% for trix in trixs %}
+      <div class="card" style="width: 18rem;">
+        <img src="{{trix.photo.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{trix.user.username}}</h5>
+          <p class="card-text">{{trix.text}}</p>
+          <a href="{% url 'trix_edit' trix.id %}" class="btn btn-primary">Edit</a>
+          <a href="{% url 'trix_delete' trix.id%}" class="btn btn-danger">Delete</a>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+{% endblock content %}

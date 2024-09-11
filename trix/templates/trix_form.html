@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}Trix{% endblock title %}
+
+{% block content %}
+<h1 class="text-white text-center mt-4">Welcome to TrixTer Project</h1>
+
+<h2>{% if form.instance.pk %}Edit Trix
+    {% else %}Create Trix
+    {%endif%}
+    <form method="post" enctype="multipart/form-data" class="form">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="btn btn-warning" type="submit">Save Trix</button>
+    </form>
+    <a href="{%url 'trix_list'%}">back to All Trix</a>
+</h2>
+{% endblock content %}

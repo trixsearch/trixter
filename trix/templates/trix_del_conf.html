@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}Trixter delete{% endblock title %}
+
+{% block content %}
+<h1 class="text-white text-center mt-4">Are You Sure to Delete your Trix here </h1>
+<form method="POST">
+    {% csrf_token %}
+    <button class="btn btn-danger">Yes, Delete it</button>
+
+    <a class = "btn btn-success" href="{% url 'trix_list' %}">No, Cancel get back</a>
+</form>
+{% endblock content %}
